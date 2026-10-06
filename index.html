@@ -4,7 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Countdown to ACOTAR 6</title>
-  <meta name="description" content="A starlit countdown and advent calendar for ACOTAR 6." />
+  <meta name="description" content="A starlit countdown to A Court of Splintered Harmony (ACOTAR 6) on 27 October 2026 — open a new door every day for a quote, a reminder and a fan theory." />
+  <!-- Link previews. If you host somewhere else, update these two absolute URLs. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ACOTAR 6 Countdown" />
+  <meta property="og:title" content="Countdown to ACOTAR 6 ✦ A Court of Splintered Harmony" />
+  <meta property="og:description" content="A starlit countdown and advent calendar — open a new door every day for a quote, a reminder and a fan theory." />
+  <meta property="og:url" content="https://idevelopes.github.io/acotar-countdown/" />
+  <meta property="og:image" content="https://idevelopes.github.io/acotar-countdown/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0b0f2e" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -22,7 +32,9 @@
 
   <main>
     <header class="hero">
-      <p class="greeting" id="greeting">Hello, darling</p>
+      <button class="greeting" id="greeting" type="button" aria-label="Change your name">
+        <span id="greeting-text">Hello, darling</span><span class="edit" aria-hidden="true">✎</span>
+      </button>
       <h1 id="title">ACOTAR 6</h1>
       <p class="subtitle" id="subtitle"></p>
       <p class="release-date" id="release-date"></p>
@@ -46,6 +58,7 @@
 
     <footer>
       <p>Night Triumphant — and the Stars Eternal.</p>
+      <p><button class="link-btn" id="gift-open" type="button">🎁 Counting down with someone? Send them a link with their name</button></p>
       <p class="small">Made with love 💜 · Fan-made, not affiliated with Sarah J. Maas or Bloomsbury.</p>
     </footer>
   </main>
@@ -80,6 +93,32 @@
         </div>
       </section>
     </article>
+  </dialog>
+
+  <dialog class="name-dialog" id="name-dialog" aria-labelledby="name-title">
+    <form id="name-form">
+      <p class="eyebrow">✦ Welcome to Velaris ✦</p>
+      <h3 id="name-title">What shall the stars call you?</h3>
+      <input id="name-input" type="text" maxlength="30" autocomplete="given-name" placeholder="Your name" aria-label="Your name" />
+      <div class="actions">
+        <button type="button" class="ghost" id="name-skip">Skip</button>
+        <button type="submit" class="primary">Enter Velaris</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="name-dialog" id="gift-dialog" aria-labelledby="gift-title">
+    <form id="gift-form">
+      <p class="eyebrow">🎁 A gift from the Night Court</p>
+      <h3 id="gift-title">Make a link for someone special</h3>
+      <p class="muted">They'll be greeted by name every time they open it.</p>
+      <input id="gift-input" type="text" maxlength="30" placeholder="Their name" aria-label="Their name" />
+      <input id="gift-link" type="text" readonly aria-label="Personalised link" hidden />
+      <div class="actions">
+        <button type="button" class="ghost" id="gift-close">Close</button>
+        <button type="submit" class="primary" id="gift-submit">Copy link ✦</button>
+      </div>
+    </form>
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

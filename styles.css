@@ -82,11 +82,20 @@ main {
 /* ---------- hero ---------- */
 .hero { text-align: center; padding: 24px 0 8px; }
 .greeting {
+  font: inherit;
   font-style: italic;
   color: var(--ink-dim);
   margin: 0 0 4px;
   font-size: 1.15rem;
+  background: none;
+  border: 0;
+  padding: 2px 8px;
+  border-radius: 99px;
+  cursor: pointer;
 }
+.greeting .edit { font-style: normal; font-size: 0.85em; margin-left: 6px; opacity: 0.45; transition: opacity 0.2s ease; }
+.greeting:hover .edit, .greeting:focus-visible .edit { opacity: 1; }
+.greeting:focus-visible { outline: 1px solid var(--card-border); }
 h1 {
   font-family: var(--display);
   font-weight: 700;
@@ -376,6 +385,64 @@ cite::before { content: "— "; }
 }
 .vote button[aria-pressed="true"] { background: rgba(243, 213, 138, 0.18); border-color: var(--gold); color: #fff; }
 
+/* ---------- name & gift dialogs ---------- */
+.name-dialog {
+  width: min(420px, calc(100vw - 32px));
+  padding: 28px 22px 22px;
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #1d1450, #0c0a28);
+  color: var(--ink);
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+.name-dialog::backdrop { background: rgba(4, 4, 18, 0.75); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.name-dialog[open] { animation: rise 0.45s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.name-dialog h3 { font-family: var(--display); color: var(--gold); font-weight: 600; letter-spacing: 0.05em; margin: 6px 0 4px; font-size: 1.3rem; }
+.eyebrow { font-family: var(--display); font-size: 0.66rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-dim); margin: 0; }
+.muted { color: var(--ink-dim); font-style: italic; margin: 0 0 4px; }
+.name-dialog input {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 16px;
+  font: inherit;
+  font-size: 1.15rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  outline: none;
+}
+.name-dialog input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(243, 213, 138, 0.18); }
+.name-dialog input[readonly] { font-size: 0.85rem; color: var(--ink-dim); }
+.actions { display: flex; gap: 10px; margin-top: 18px; }
+.actions button {
+  flex: 1;
+  font-family: var(--display);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 12px 10px;
+  border-radius: 99px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.primary { background: linear-gradient(180deg, #f7e2a6, var(--gold-soft)); color: #1a1145; border: 0; font-weight: 700; }
+.ghost { background: transparent; color: var(--ink-dim); border: 1px solid var(--card-border); }
+.link-btn {
+  font: inherit;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--gold-soft);
+  background: none;
+  border: 0;
+  padding: 4px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(243, 213, 138, 0.35);
+  text-underline-offset: 4px;
+}
+
 /* ---------- toast ---------- */
 .toast {
   position: fixed;
@@ -409,5 +476,5 @@ footer .small { font-size: 0.8rem; opacity: 0.7; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .star, .shooting, .door.today, .door-dialog[open] { animation: none !important; }
+  .star, .shooting, .door.today, .door-dialog[open], .name-dialog[open] { animation: none !important; }
 }
