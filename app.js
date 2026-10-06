@@ -223,6 +223,7 @@
   // ---------- header ----------
   $("greeting").textContent = CONFIG.name ? `Hello, ${CONFIG.name} darling` : "Hello, darling";
   $("title").textContent = CONFIG.bookTitle;
+  $("subtitle").textContent = CONFIG.subtitle || "";
   $("release-date").textContent = fmt(RELEASE, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
 
   const pad = (n) => String(n).padStart(2, "0");

@@ -99,6 +99,12 @@ h1 {
   color: transparent;
   text-shadow: 0 0 40px rgba(243, 213, 138, 0.25);
 }
+.subtitle {
+  font-style: italic;
+  font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+  color: var(--ink);
+  margin: 2px 0 0;
+}
 .release-date {
   font-family: var(--display);
   letter-spacing: 0.25em;

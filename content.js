@@ -16,10 +16,11 @@
 window.ACOTAR = {
   CONFIG: {
     // Shown in the greeting: "Hello, ___ darling". Leave empty for just "darling".
-    name: "",
+    name: "Trisha",
     startDate: "2026-10-06",
     releaseDate: "2026-10-27",
     bookTitle: "ACOTAR 6",
+    subtitle: "A Court of Splintered Harmony",
   },
 
   DAYS: [
@@ -28,14 +29,14 @@ window.ACOTAR = {
       art: { icon: "constellation", palette: "night", caption: "The night sky over Velaris" },
       quote: {
         text: "To the stars who listen — and the dreams that are answered.",
-        source: "A Court of Mist and Fury",
+        source: "Rhysand, A Court of Mist and Fury",
       },
       reminder:
         "Day one of the countdown! Double-check your preorder is actually placed — and decide once and for all: special edition, standard… or both. No judgement.",
       theory: {
-        title: "Elain's turn at last?",
+        title: "Whose book is it?",
         text:
-          "She's the last Archeron sister without her own story. Her Seer gift, her quiet strength, that unresolved mating bond and the way Azriel watches her — a lot of readers think everything has been setting Elain up for a book of her own.",
+          "It's officially called A Court of Splintered Harmony, and it's part one of a story so big Sarah J. Maas split it across books 6, 7 and 8. A leaked audiobook sample reportedly opens with Azriel — and with Elain still the last Archeron sister without her own story, readers are betting on both of them.",
       },
     },
 
@@ -81,9 +82,9 @@ window.ACOTAR = {
       reminder:
         "Spoiler-proof your phone now, before the leaks start: mute ACOTAR, Rhysand, Elain, Azriel, Lucien and Nesta on TikTok, Instagram and X. Future you will be grateful.",
       theory: {
-        title: "The Bone Carver's little boy",
+        title: "The Bone Carver knows more",
         text:
-          "When Feyre visited the Bone Carver in ACOMAF, he took the form of a little boy — and many readers think he was showing her the son she'd one day have with Rhys. If the Bone Carver can see the future… what else does he know?",
+          "When Feyre visited the Bone Carver in ACOWAR, he took the form of a little boy with Rhys's colouring and Feyre's mouth — her future son. Nyx was born in ACOSF. His sister is the Weaver, and some fans think Koschei is a third sibling. If the Bone Carver could see Nyx coming… what else has he seen?",
       },
     },
 
@@ -92,14 +93,14 @@ window.ACOTAR = {
       art: { icon: "harp", palette: "velaris", caption: "The Dread Trove" },
       quote: {
         text: "Only you can decide what breaks you, Cursebreaker. Only you.",
-        source: "A Court of Mist and Fury",
+        source: "The Suriel, A Court of Wings and Ruin",
       },
       reminder:
         "Remember the Dread Trove? The Harp, the Crown and the Mask — ancient objects of terrible power that Nesta hunted down in ACOSF. They were found… but they didn't stop existing.",
       theory: {
         title: "The Trove isn't done with us",
         text:
-          "Objects that powerful don't get introduced just to sit in a vault. Fans are betting at least one piece of the Dread Trove — maybe the Harp — plays a part again.",
+          "Objects that powerful don't get introduced just to sit in a vault. Fans are betting at least one piece of the Dread Trove — maybe the Harp, which can open any door (some say even between worlds) — plays a part again.",
       },
     },
 
@@ -127,11 +128,11 @@ window.ACOTAR = {
         source: "Velaris whisper",
       },
       reminder:
-        "Remember Vassa? She's the human queen cursed to be a firebird, bound to the ancient death-god Koschei. Lucien and Jurian have been living with her in the human lands.",
+        "Remember Vassa? She's the human queen Koschei cursed to be a firebird by day and a woman only by night, bound to his lake. Lucien and Jurian have been living with her in the human lands.",
       theory: {
-        title: "Koschei is the next big bad",
+        title: "Koschei's mystery allies",
         text:
-          "He's been lurking at the edges since ACOWAR: an ancient death-god holding Vassa's curse. Some readers even think he's connected to the Weaver and the Bone Carver. A villain that patient is a villain waiting for his book.",
+          "Not a theory any more: the official blurb says Koschei the Deathless is stirring after millennia bound to a mountain lake, with \"powerful allies hell-bent on reclaiming… the human lands.\" Who are they? Remember, back in ACOFAS Eris warned that Beron was eyeing the human lands…",
       },
     },
 
@@ -139,8 +140,8 @@ window.ACOTAR = {
     {
       art: { icon: "skyline", palette: "velaris", caption: "Velaris, City of Starlight" },
       quote: {
-        text: "Don't let the hard days win.",
-        source: "A Court of Mist and Fury",
+        text: "There are good days and hard days for me — even now. Don't let the hard days win.",
+        source: "Mor, A Court of Mist and Fury",
       },
       reminder:
         "Two weeks today! Text your bookish friends and book a spoiler-chat date for after release — snacks, wine, and screaming optional but encouraged.",
@@ -159,11 +160,11 @@ window.ACOTAR = {
         source: "Velaris whisper",
       },
       reminder:
-        "Remember the crossover? In House of Flame and Shadow, Bryce Quinlan landed in Prythian — and met Azriel, Nesta and the Inner Circle. Her Starsword and Azriel's blade Truth-Teller seemed to react to each other.",
+        "Remember the crossover? In House of Flame and Shadow, Bryce Quinlan landed in Prythian and was questioned by Rhys, Azriel and Nesta. Her Starsword turned out to be the twin of Azriel's dagger, Truth-Teller.",
       theory: {
         title: "Truth-Teller's secret",
         text:
-          "Why would Azriel's dagger react to a sword from another world? Many readers think Truth-Teller and the Starsword were forged together — and that the answer ties Prythian's history to the Crescent City universe.",
+          "Why would Azriel carry the twin of a sword from another world? Readers think the story of how Truth-Teller came to Prythian ties Prythian's history to the Crescent City universe — and with Azriel reportedly front and centre in this book, we might finally find out.",
       },
     },
 
@@ -191,7 +192,7 @@ window.ACOTAR = {
         source: "Velaris whisper",
       },
       reminder:
-        "Remember Eris? Lucien's eldest brother has been secretly working with the Night Court, and he wants his father Beron gone so he can rule Autumn himself.",
+        "Remember Eris? Lucien's eldest brother has been secretly passing the Night Court information about his father Beron — and he very clearly wants Beron's throne.",
       theory: {
         title: "Eris becomes High Lord",
         text:
@@ -243,7 +244,7 @@ window.ACOTAR = {
       theory: {
         title: "Helion, Spell-Cleaver",
         text:
-          "Helion's gift is breaking spells and curses. Vassa is cursed. Lucien might be his son. Readers think the High Lord of Day is the key to setting the firebird queen free — and that this is how Helion and Lucien finally come face to face.",
+          "They call him Helion Spell-Cleaver. Vassa is cursed. Lucien is (secretly) his son. Readers think the High Lord of Day — or a son who inherited his gift — could be the key to setting the firebird queen free.",
       },
     },
 
@@ -271,11 +272,11 @@ window.ACOTAR = {
         source: "Feyre, A Court of Mist and Fury",
       },
       reminder:
-        "Remember the bonds: Feyre & Rhys, Nesta & Cassian, Elain & Lucien — but Elain has never accepted hers. A mating bond can be rejected… or so readers hope.",
+        "Remember the bonds: Feyre & Rhys, Nesta & Cassian, Elain & Lucien — but Elain has never accepted hers, and Lucien has given her space ever since.",
       theory: {
         title: "Elain × Azriel (or not?)",
         text:
-          "The most argued-about pairing in the fandom. The stolen glances, the Solstice gift, the garden… but Lucien is her mate, and Azriel has his own secrets. Will the bond win or will the heart? Pick a side today.",
+          "The most argued-about pairing in the fandom. The stolen glances, the near-kiss at Solstice… and then Rhys ordering Azriel to stay away from her, because crossing Lucien's mating bond could start a blood duel. Will the bond win or will the heart? Pick a side today.",
       },
     },
 
@@ -303,7 +304,7 @@ window.ACOTAR = {
         source: "Velaris whisper",
       },
       reminder:
-        "Remember Mor? Brave, bright Morrigan, who spent five hundred years hiding who she really loves. She deserves a love story of her own — and so far, she hasn't got one.",
+        "Remember Mor? Brave, bright Morrigan, who hid for centuries that she prefers females — until she finally told Feyre in ACOWAR. She deserves a love story of her own, and so far she hasn't got one.",
       theory: {
         title: "Mor's happy ending",
         text:
@@ -337,9 +338,9 @@ window.ACOTAR = {
       reminder:
         "Two days! Lay out your release-day outfit (comfiest pyjamas only), make sure your preorder has shipped or is downloading, and warn your phone it's going on Do Not Disturb.",
       theory: {
-        title: "A High Lord falls",
+        title: "Who betrayed whom?",
         text:
-          "Seven courts, seven High Lords, and several of them are hanging by a thread. Fans are betting at least one court gets a brand-new High Lord (or High Lady) by the final page.",
+          "The blurb says the Night Court is \"reeling from recent betrayals and revealed truths\" and the rifts between them \"seem insurmountable.\" The Inner Circle, splintered? Fans' top suspects: Rhys's order to Azriel, Elain's secrets, and Eris's bargains.",
       },
     },
 
@@ -367,7 +368,7 @@ window.ACOTAR = {
         source: "Today, the dream is answered.",
       },
       reminder:
-        "IT'S HERE. Phone on silent. Blanket on. Tea poured. Go read it — Prythian has been waiting for you. Happy release day! 💜",
+        "IT'S HERE. Phone on silent. Blanket on. Tea poured. Go read it — Prythian has been waiting for you. (And when you finish that cliffhanger: book 7, A Court of Forgotten Melody, is out 12 January 2027.) Happy release day! 💜",
       theory: {
         title: "All will be revealed",
         text:
