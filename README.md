@@ -1,48 +1,61 @@
 # ✨ ACOTAR 6 Countdown
 
-A starlit countdown to **27 October 2026** with a Velaris-themed advent calendar.
-A new door unlocks every day from 6 October. Each door has:
+A starlit countdown to **A Court of Splintered Harmony** (ACOTAR 6), out **Tuesday 27 October 2026**,
+with a Velaris-themed advent calendar. A new door unlocks every day from 6 October. Behind each one:
 
-- **Artwork** – a hand-drawn SVG illustration for each day (moon, Illyrian wings, Truth-Teller, the Dread Trove harp, Velaris skyline and more)
-- **Quote** – lines from the books, plus some fan-made "Velaris whispers"
-- **Reminder** – a recap of something worth remembering, or a release-prep task
-- **Theory** – a fan theory, with buttons to vote 🔥 / 🤔 / 🙅
+- **Artwork**: a hand-drawn SVG illustration for the day
+- **Quote**: a line from the books, or a fan-made "Velaris whisper"
+- **Reminder**: a recap to refresh your memory, or a release-day prep task
+- **Theory**: a fan theory, with buttons to vote 🔥 / 🤔 / 🙅
 
-Locked doors shake and tell you to be patient, opened doors remember themselves,
-and release day comes with a starfall.
+Visitors are asked their name on the first visit and greeted by it after that ("Hello, ___ darling").
+Tap the greeting to change it. Locked doors shake and tell you to be patient, opened doors are
+remembered, and release day brings a starfall.
+
+## Gift links
+
+The footer has a **"Send them a link with their name"** button. It makes a link like
+`…/acotar-countdown/?name=Trisha`, so whoever opens it is greeted by name straight away.
+
+## Privacy
+
+Nothing leaves the browser. Names, opened doors and votes are kept in the visitor's own
+`localStorage`. There are no accounts, analytics or cookies. The only third-party request is for Google Fonts.
 
 ## Run it
 
-It's plain HTML/CSS/JS with no build step. Open `index.html` in a browser, or
-serve the folder with any static host.
+It's plain HTML, CSS and JS with no build step. Open `index.html`, or serve the folder with any static host.
 
-### Put it online with GitHub Pages (free)
+### Publish with GitHub Pages
 
-1. On GitHub, go to **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**, then pick the branch and `/ (root)`.
-3. After a minute it's live at `https://<username>.github.io/acotar-countdown/`.
+1. **Settings → Pages → Build and deployment → Deploy from a branch**, then choose `main` and `/ (root)`.
+2. It goes live at `https://idevelopes.github.io/acotar-countdown/`.
 
-On her phone, open the link and use **Share → Add to Home Screen** so it works like an app.
+Pages on a private repository needs a paid GitHub plan. On a free plan, make the repository public first
+(**Settings → General → Danger Zone → Change visibility**).
 
-## Make it hers
+If you host it somewhere else, update the `og:url` and `og:image` links in `index.html`
+so link previews still work.
 
-Everything she sees is in **`content.js`**:
+On a phone, open the site and use **Share → Add to Home Screen** to use it like an app.
 
-- `CONFIG.name`: put her name in for a "Hello, ___ darling" greeting
+## Editing the content
+
+All the text lives in **`content.js`**:
+
+- `CONFIG`: the dates, the title, and a fallback name
 - `DAYS`: one entry per day, in order. Change any quote, reminder or theory.
-  Swapping the fan-made "Velaris whisper" lines for her favourite real quotes is a nice touch.
-- `art.icon` can be any of: `moon`, `constellation`, `rose`, `sun`, `snowflake`, `leaf`, `wings`,
-  `book`, `crown`, `harp`, `mask`, `dagger`, `mountain`, `skyline`, `teacup`, `candle`,
-  `cauldron`, `heart`, `feather`, `flame`, `hourglass`, `starfall`
-- `art.palette` can be: `night`, `velaris`, `starfall`, `spring`, `autumn`, `winter`, `day`, `dawn`, `illyrian`
+- `art.icon`: `moon`, `constellation`, `rose`, `sun`, `snowflake`, `leaf`, `wings`, `book`, `crown`,
+  `harp`, `mask`, `dagger`, `mountain`, `skyline`, `teacup`, `candle`, `cauldron`, `heart`,
+  `feather`, `flame`, `hourglass`, `starfall`
+- `art.palette`: `night`, `velaris`, `starfall`, `spring`, `autumn`, `winter`, `day`, `dawn`, `illyrian`
 
-## Preview a future day
+## Previewing a future day
 
-Add `?date=YYYY-MM-DD` to the URL to pretend it's another day, for example
-`index.html?date=2026-10-27` to see release day. This is only a preview. Opened
-doors are saved in the browser, so if you open one early while testing, it will
-show as opened for her too on that device. Test in a private window to avoid that.
+Add `?date=YYYY-MM-DD` to the URL, for example `?date=2026-10-27` for release day. Doors you open
+while previewing are saved as opened in that browser, so test in a private window.
 
 ---
 
-Fan-made with love. Not affiliated with Sarah J. Maas or Bloomsbury.
+Fan-made with love. Not affiliated with Sarah J. Maas or Bloomsbury. Short quotes are from the
+*A Court of Thorns and Roses* series and remain the property of their author.

@@ -1,4 +1,4 @@
-// ✨ Everything she sees lives in this file — edit freely!
+// ✨ Everything visitors see lives in this file — edit freely!
 //
 // CONFIG  → name, dates
 // DAYS    → one entry per door, in order, from startDate to releaseDate.
@@ -11,12 +11,13 @@
 //   theory:  { title, text }
 //
 // Quotes marked "Velaris whisper" are little fan-made lines, not from the
-// books — swap in her favourite real quotes if you know them!
+// books — swap in favourite real quotes if you like!
 
 window.ACOTAR = {
   CONFIG: {
-    // Shown in the greeting: "Hello, ___ darling". Leave empty for just "darling".
-    name: "Trisha",
+    // Fallback name for the greeting ("Hello, ___ darling"). Visitors enter their
+    // own name on first visit, or arrive with one via a ?name= gift link.
+    name: "",
     startDate: "2026-10-06",
     releaseDate: "2026-10-27",
     bookTitle: "ACOTAR 6",

@@ -221,7 +221,6 @@
   const starfall = (n) => { for (let k = 0; k < n; k++) setTimeout(shootingStar, k * 140); };
 
   // ---------- header ----------
-  $("greeting").textContent = CONFIG.name ? `Hello, ${CONFIG.name} darling` : "Hello, darling";
   $("title").textContent = CONFIG.bookTitle;
   $("subtitle").textContent = CONFIG.subtitle || "";
   $("release-date").textContent = fmt(RELEASE, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
@@ -375,7 +374,93 @@
     });
   });
 
+  // ---------- name ----------
+  // Priority: ?name= link (e.g. a gift link) > what the visitor typed > CONFIG.name.
+  const KEY_NAME = "acotar6:name";
+  const KEY_ASKED = "acotar6:asked";
+  const cleanName = (v) => String(v || "").replace(/\s+/g, " ").trim().slice(0, 30);
+  const urlName = cleanName(new URLSearchParams(location.search).get("name"));
+  if (urlName) store.set(KEY_NAME, urlName);
+  let name = urlName || cleanName(store.get(KEY_NAME, "")) || cleanName(CONFIG.name);
+
+  const renderGreeting = () => {
+    $("greeting-text").textContent = name ? `Hello, ${name} darling` : "Hello, darling";
+  };
+
+  const showModal = (dlg) => {
+    if (typeof dlg.showModal === "function") dlg.showModal();
+    else dlg.setAttribute("open", "");
+  };
+  const hideModal = (dlg) => {
+    if (typeof dlg.close === "function") dlg.close();
+    else dlg.removeAttribute("open");
+  };
+
+  const nameDialog = $("name-dialog");
+  const openNameDialog = () => {
+    $("name-input").value = name;
+    showModal(nameDialog);
+    $("name-input").focus();
+  };
+  $("greeting").addEventListener("click", openNameDialog);
+  $("name-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    name = cleanName($("name-input").value);
+    store.set(KEY_NAME, name);
+    store.set(KEY_ASKED, true);
+    renderGreeting();
+    hideModal(nameDialog);
+    if (name) {
+      toast(`Welcome to Velaris, ${name}.`);
+      starfall(4);
+    }
+  });
+  // Ask once: skipping (button or Esc) counts as an answer.
+  $("name-skip").addEventListener("click", () => {
+    store.set(KEY_ASKED, true);
+    hideModal(nameDialog);
+  });
+  nameDialog.addEventListener("cancel", () => store.set(KEY_ASKED, true));
+
+  // ---------- gift link ----------
+  const giftDialog = $("gift-dialog");
+  const giftLink = $("gift-link");
+  const linkFor = (who) => {
+    const url = new URL(location.href);
+    url.search = "";
+    url.hash = "";
+    if (who) url.searchParams.set("name", who);
+    return url.toString();
+  };
+  $("gift-open").addEventListener("click", () => {
+    $("gift-input").value = "";
+    giftLink.hidden = true;
+    showModal(giftDialog);
+    $("gift-input").focus();
+  });
+  $("gift-close").addEventListener("click", () => hideModal(giftDialog));
+  $("gift-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const who = cleanName($("gift-input").value);
+    const url = linkFor(who);
+    giftLink.value = url;
+    giftLink.hidden = false;
+    // Feedback goes on the button: a toast would sit behind the modal.
+    const btn = $("gift-submit");
+    try {
+      await navigator.clipboard.writeText(url);
+      btn.textContent = "Copied ✓";
+    } catch {
+      giftLink.select();
+      btn.textContent = "Copy it above ↑";
+    }
+    clearTimeout(btn.timer);
+    btn.timer = setTimeout(() => { btn.textContent = "Copy link ✦"; }, 2200);
+  });
+
   // ---------- go ----------
+  renderGreeting();
+  if (!name && !store.get(KEY_ASKED, false)) setTimeout(openNameDialog, 600);
   if (DAYS.length !== TOTAL_DAYS + 1) {
     console.warn(`content.js has ${DAYS.length} days but ${TOTAL_DAYS + 1} are needed from startDate to releaseDate.`);
   }
