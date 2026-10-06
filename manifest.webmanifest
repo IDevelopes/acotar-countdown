@@ -1,13 +1,26 @@
 {
   "name": "ACOTAR 6 Countdown",
   "short_name": "ACOTAR 6",
+  "description": "A starlit countdown and daily advent calendar for A Court of Splintered Harmony (ACOTAR 6), out 27 October 2026.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#0b0f2e",
   "theme_color": "#0b0f2e",
   "icons": [
-    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" },
-    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
