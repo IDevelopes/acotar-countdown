@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Countdown to ACOTAR 6</title>
+  <meta name="description" content="A starlit countdown and advent calendar for ACOTAR 6." />
+  <meta name="theme-color" content="#0b0f2e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ACOTAR 6" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <main>
+    <header class="hero">
+      <p class="greeting" id="greeting">Hello, darling</p>
+      <h1 id="title">ACOTAR 6</h1>
+      <p class="subtitle" id="subtitle"></p>
+      <p class="release-date" id="release-date"></p>
+
+      <div class="countdown" id="countdown" role="timer" aria-live="off">
+        <div class="unit unit-days"><span id="cd-days">--</span><small>days</small></div>
+        <div class="unit"><span id="cd-hours">--</span><small>hours</small></div>
+        <div class="unit"><span id="cd-mins">--</span><small>minutes</small></div>
+        <div class="unit"><span id="cd-secs">--</span><small>seconds</small></div>
+      </div>
+      <p class="countdown-done" id="countdown-done" hidden>It's here. Go read it. ✨</p>
+
+      <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+    </header>
+
+    <section class="calendar-section">
+      <h2>The Starlight Calendar</h2>
+      <p class="hint" id="hint">A new door opens every day. Tap today's to see what the stars have for you.</p>
+      <ol class="calendar" id="calendar"></ol>
+    </section>
+
+    <footer>
+      <p>Night Triumphant — and the Stars Eternal.</p>
+      <p class="small">Made with love 💜 · Fan-made, not affiliated with Sarah J. Maas or Bloomsbury.</p>
+    </footer>
+  </main>
+
+  <dialog class="door-dialog" id="dialog" aria-labelledby="dlg-title">
+    <article>
+      <button class="close" id="dlg-close" aria-label="Close">×</button>
+      <figure class="art" id="dlg-art"></figure>
+      <p class="art-caption" id="dlg-caption"></p>
+      <h3 id="dlg-title"></h3>
+      <p class="days-left" id="dlg-days"></p>
+
+      <section class="card quote-card">
+        <span class="label">✦ Quote</span>
+        <blockquote id="dlg-quote"></blockquote>
+        <cite id="dlg-source"></cite>
+      </section>
+
+      <section class="card">
+        <span class="label">✦ Reminder</span>
+        <p id="dlg-reminder"></p>
+      </section>
+
+      <section class="card">
+        <span class="label">✦ Theory</span>
+        <h4 id="dlg-theory-title"></h4>
+        <p id="dlg-theory"></p>
+        <div class="vote" id="dlg-vote" role="group" aria-label="What do you think?">
+          <button data-vote="yes">🔥 Believe it</button>
+          <button data-vote="maybe">🤔 Maybe</button>
+          <button data-vote="no">🙅 Never</button>
+        </div>
+      </section>
+    </article>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
